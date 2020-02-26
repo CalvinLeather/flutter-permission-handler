@@ -606,6 +606,8 @@ public class PermissionHandlerPlugin implements MethodCallHandler {
 
       case PERMISSION_GROUP_LOCATION_WHEN_IN_USE:
       case PERMISSION_GROUP_LOCATION:
+        if (hasPermissionInManifest(Manifest.permission.ACTIVITY_RECOGNITION))
+          permissionNames.add(Manifest.permission.ACTIITY_RECOGNITION));
         if (hasPermissionInManifest(Manifest.permission.ACCESS_COARSE_LOCATION))
           permissionNames.add(Manifest.permission.ACCESS_COARSE_LOCATION);
 
